@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="LandingPage.css" />
+  </head>
+  <body>
+    <div class="Page">
+
+        <div class="logos">
+             <img
+        src="assets/windows.png"
+        alt="bugsWindows"
+        class="bugsWindows"
+        id="logo"
+      />
+      <h1 class="bugs" id="bugsText">BUGS</h1>
+        </div>
+     
+      <div class="Start" id="startDiv">
+        <a href="Decision.html" class="getStarted">Get Started</a>
+      </div>
+    </div>
+
+    <script>
+      const logo = document.getElementById('logo');
+      const bugsText = document.getElementById('bugsText');
+      const startDiv = document.getElementById('startDiv');
+
+      // 1. Show logo and move slightly left
+      setTimeout(() => {
+        logo.style.opacity = '1';
+        logo.style.transform = 'translateX(-10px)';
+      }, 900);
+
+      // 2. Show BUGS text
+      setTimeout(() => {
+        bugsText.style.opacity = '1';
+        bugsText.style.transform = 'translateX(0)';
+      }, 1200);
+
+      // 3. Show "Get Started"
+      setTimeout(() => {
+        startDiv.style.opacity = '1';
+      }, 3500);
+    </script>
+  </body>
+</html>

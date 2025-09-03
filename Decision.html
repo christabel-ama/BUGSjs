@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Decision Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Decision.css">
+</head>
+<body>
+  <nav>
+    <img src="assets/bugsLogo.png" alt="logo" class="logo" />
+  </nav>
+
+  <div class="container">
+    <!-- First content block -->
+    <div class="accomodate" id="block1">
+      <div class="estContainer">
+        <img src="assets/building.png" alt="estate" class="estate" />
+      </div>
+      <div class="content">
+        <h2 class="head">BUGS ACCOMMODATION</h2>
+        <h4 class="subText">Apartments with comfort, privacy and ease.</h4>
+        <p class="idea">
+          Find your perfect space with ease, for we've got the <br />
+          right property for you.
+        </p>
+        <div class="containRealty">
+          <a href="FORM.html" class="realty">Book Your Stay</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="accomodate2" id="block2">
+      <div class="estContainer">
+        <img src="assets/building.png" alt="estate" class="estate" />
+      </div>
+      <div class="content">
+        <h2 class="head">BUGS CHOW</h2>
+        <h4 class="subText">Delicacies crafted from the earth's bounty</h4>
+        <p class="idea">
+         Find your perfect meal with ease, for we've got the right food for you
+        </p>
+        <div class="containRealty">
+          <a href="Chow.html" class="realty">Get Started</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second empty block -->
+    
+
+  <script>
+    const block1 = document.getElementById("block1");
+    const block2 = document.getElementById("block2");
+
+    // Fade in first block after short delay
+    setTimeout(() => {
+      block1.classList.add("show");
+    }, 500);
+
+    // Fade in second block after another delay
+    setTimeout(() => {
+      block2.classList.add("show2");
+    }, 1000);
+  </script>
+</body>
+</html>

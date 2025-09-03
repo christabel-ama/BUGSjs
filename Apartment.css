@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #d1c4c4;
+  
+}
+
+nav {
+  background: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav img.logo {
+  height: 20px;
+}
+
+#arrow {
+  width: 23px;
+}
+
+.carousel-item img {
+  height: 350px;
+}
+
+.apart {
+  display: flex;
+  justify-content: center;
+  margin: 20px 5px;
+  color: #944040;
+}
+
+.apart h1 {
+  font-family: 'Open Sans', sans-serif;
+  /* font-weight: 600; */
+}
+
+.change {
+  background-color: rgb(121, 62, 51);
+  width: 60%;
+  height: 5vh;
+  display: flex;
+  justify-self: center;
+  justify-content: center;
+  gap: 5px;
+  border-radius: 50px;
+  margin-top: 20px;
+}
+
+.attention1 {
+  background-color: #fff;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  border-radius: 50px;
+}
+.attention2 {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  border-radius: 50px;
+}
+
+.available {
+  font-size: 12px;
+  align-items: center;
+  /* justify-content: center; */
+  display: flex;
+  text-align: center;
+}
+
+.std {
+  height: 18vh;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+
+}
+
+.std, .props{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+#content{
+    margin-top: 20px;
+  width: 90%;
+  display: flex;
+  justify-self: center;
+  flex-direction: column;
+  /* height: 20vh; */
+  /* gap: 90px; */
+  /* background-color: #944040; */
+  justify-content: center;
+}
+
+.props {
+  background-color: rgb(121, 62, 51);
+  height: 31vh;
+  width: 50%;
+  box-shadow: 2px 3px 3px #000;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+/* transform: translateY(-15px); */
+  /* 👇 Example: fade in effect */
+  animation: fadeIn 1s ease-in forwards;
+}
+
+/* Define the keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;   /* Start transparent */
+  }
+  to {
+    opacity: 1;   /* End fully visible */
+  }
+}
+
+
+.prop1{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+#prop1{
+  margin-top: 30px;
+}
+
+.stdText{
+  font-size: 10px;
+  text-align: center;
+  color: #fff;
+  margin-top: 8px;
+  font-weight: 700;
+}
+
+h5{
+  font-size: 9px;
+  padding: 0 6px;
+  color: #e2d9d9;
+}
+button{
+  border: none;
+  width: 40%;
+  border-radius: 30px;
+  margin-right: 10px;
+  font-weight: 700;
+  background-color: #fff;
+  box-shadow: 2px 2px 2px   #000;
+}
+
+.button{
+  display: flex;
+  justify-content: flex-end;
+  /* margin-top: 0; */
+  
+}
+
+a{
+  text-decoration: none;
+  color: rgb(158, 50, 50);
+
+
+}
