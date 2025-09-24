@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUGS CHOW X Item7(Go)</title>
+    <link rel="stylesheet" href="chowmenu.css">
+</head>
+
+<body>
+    <nav>
+        <img src="assets/bugsLogo.png" alt="logo" class="logo" />
+        <img src="assets/arrow.png" alt="arrow" id="arrow" />
+    </nav>
+
+    <!-- Policy Modal -->
+    <div id="policyModal"
+        style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.35); z-index:9999; justify-content:center; align-items:center; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);">
+        <div
+            style="background:#fff; border-radius:24px; max-width:600px; width:95%; padding:48px 32px; box-shadow:0 12px 48px rgba(0,0,0,0.25); position:relative;">
+            <h2 style="font-family:'Rubik',sans-serif; color:#702525; margin-bottom:24px; font-size:2rem;">Bugs Chow
+                Policy</h2>
+            <ul
+                style="font-family:'Montserrat',sans-serif; font-size:1.1rem; color:#333; margin-bottom:24px; padding-left:22px;">
+                <li>
+                    <strong>Trial Before Subscription</strong>
+                    <ul style="margin-top:4px;">
+                        <li>Explore our Day 1, Day 2, and Day 3 menus.</li>
+                        <li>If the meals sit well with you, subscribe once for the full plan.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Payment & Subscription</strong>
+                    <ul style="margin-top:4px;">
+                        <li>Subscription must be fully prepaid — no daily payments or partial options.</li>
+                        <li>Once subscribed, your plan covers all meals without repeated confirmations.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Service Guidelines</strong>
+                    <ul style="margin-top:4px;">
+                        <li>Meals are served at scheduled times only.</li>
+                        <li>All payments are final and non-refundable.</li>
+                        <li>If our menu doesn’t suit your needs, please do not subscribe.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Quality & Conduct</strong>
+                    <ul style="margin-top:4px;">
+                        <li>All meals are pre-packed and sealed for hygiene.</li>
+                        <li>Treat staff with respect; misconduct may lead to service termination.</li>
+                    </ul>
+                </li>
+            </ul>
+            <div style="margin-bottom:20px;">
+                <label><input type="checkbox" id="check1"> I have read and understood the policy.</label><br>
+                <label><input type="checkbox" id="check2"> I agree to follow the dining rules.</label>
+            </div>
+            <button id="agreeBtn"
+                style="background:#702525; color:#fff; border:none; border-radius:10px; padding:12px 32px; font-family:'Rubik',sans-serif; font-size:1.1rem; font-weight:600; cursor:pointer;"
+                disabled>Agree</button>
+            <span id="closeModal"
+                style="position:absolute; top:18px; right:28px; font-size:2rem; color:#702525; cursor:pointer;">&times;</span>
+        </div>
+    </div>
+
+    <section id="menu">
+        <div style="margin-bottom: 20px;">
+            <h1 style="display: flex; gap: 4px;">BUGS <span style="color: #702525;"> CHOW</span></h1>
+            <h1>Menu <span style="color: #702525;">&times;</span> Item7(Go)</h1>
+        </div>
+
+        <div class="menu-container">
+            <div class="menu-card">
+                <div class="top">
+                    <h2>ARRIVAL</h2>
+
+                </div>
+                <div class="bottom">
+                    <a class="menu-animate" id="menuItemBtn">MENU ITEM...</a>
+                </div>
+            </div>
+            <div class="menu-card">
+                <div class="top">
+                    <h2>DAY 1</h2>
+
+                </div>
+                <div class="bottom">
+                    <a class="menu-animate" id="menuItemBtn">MENU ITEM...</a>
+                </div>
+            </div>
+            <div class="menu-card">
+                <div class="top">
+                    <h2 style="color: #000;">DAY 2</h2>
+
+                </div>
+                <div class="bottom">
+                    <a class="menu-animate" id="menuItemBtn">MENU ITEM...</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="subscribe">
+            <button>
+                SUBSCRIBE
+            </button>
+        </div>
+    </section>
+
+    <!-- Menu Modal for DAY 1 -->
+    <div id="menuModalDay1"
+        style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.35); z-index:9999; justify-content:center; align-items:center; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);">
+        <div
+            style="background:#fff; border-radius:24px; max-width:360px; width:95%; height: 500px; padding:40px 28px; box-shadow:0 12px 48px rgba(0,0,0,0.25); position:relative;">
+            <h2 style="font-family:'Rubik',sans-serif; color:#702525; margin-bottom:24px; font-size:2rem;">Arrival Menu
+                &times; Items7(Go)
+            </h2>
+            <ul style="font-family:'Montserrat',sans-serif; font-size:1.4rem; color:#333; margin-bottom:20px; ">
+                <div class="meal" style="display: flex; text-align: center; gap: 20px;">
+                    <div class="meal-plate">
+                        <img src="assets/plate1.png" alt="Plate of Food" style="width: 100%; height: 100%;">
+
+                    </div>
+
+                    <li style="list-style: none; align-items: center;"><strong>Breakfast:</strong> Jollof Rice, Dodo &
+                        Chicken</li>
+                </div>
+                <br>
+                <!-- <div class="meal">
+                    <div class="meal-plate">
+                        <img src="assets/plate1.png" alt="Plate of Food" style="width: 100%; height: 100%;">
+
+                    </div>
+                    <li style="list-style: none;"><strong>Lunch:</strong> Stirred Fried Spaghetti &amp; Chicken</li>
+                </div>
+                <br>
+                <div class="meal">
+                    <div class="meal-plate">
+                        <img src="assets/plate1.png" alt="Plate of Food" style="width: 100%; height: 100%;">
+
+                    </div>
+                    <li style="list-style: none;"><strong>Dinner:</strong> Egusi Soup (Beef) &amp; Eba
+                    </li>
+                </div> -->
+            </ul>
+            <button id="closeMenuModalDay1"
+                style="background:#702525; color:#fff; border:none; border-radius:8px; padding:10px 24px; font-family:'Rubik',sans-serif; font-size:1rem; font-weight:600; cursor:pointer; margin-top:160px;">
+                Close
+            </button>
+            <span id="closeMenuModalXDay1"
+                style="position:absolute; top:18px; right:28px; font-size:2rem; color:#702525; cursor:pointer;">&times;</span>
+        </div>
+    </div>
+
+    <!-- Menu Modal for DAY 2 -->
+    <div id="menuModalDay2"
+        style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.35); z-index:9999; justify-content:center; align-items:center; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);">
+        <div
+            style="background:#fff; border-radius:24px; max-width:360px; width:95%; height: 500px; padding:40px 28px; box-shadow:0 12px 48px rgba(0,0,0,0.25); position:relative;">
+            <h2 style="font-family:'Rubik',sans-serif; color:#702525; margin-bottom:18px; font-size:2rem;">Day 1 Menu
+                &times; Items7(Go)
+            </h2>
+            <ul
+                style="font-family:'Montserrat',sans-serif; font-size:1.4rem; color:#333; margin-bottom:18px; padding-left:18px;">
+                <div class="meal">
+                    <div class="meal-plate">
+                        <img src="assets/plate1.png" alt="Plate of Food" style="width: 100%; height: 100%;">
+                    </div>
+                    <li style="list-style: none;"><strong>Breakfast:</strong> Yam &amp; Egg Sauce </li>
+                </div>
+                <br>
+                <div class="meal">
+                    <div class="meal-plate">
+                        <img src="assets/plate1.png" alt="Plate of Food" style="width: 100%; height: 100%;">
+                    </div>
+                    <li style="list-style: none;"><strong>Lunch:</strong> Stir Fried Spaghetti &amp; Chicken
+                    </li>
+                </div>
+                <br>
+                <div class="meal">
+                    <div class="meal-plate">
+                        <img src="assets/plate1.png" alt="Plate of Food" style="width: 100%; height: 100%;">
+                    </div>
+                    <!-- <br> -->
+                    <li style="list-style: none;"><strong>Dinner:</strong> Jollof Rice &amp; Fried + Chicken </li>
+                </div>
+            </ul>
+            <button id="closeMenuModalDay2"
+                style="background:#702525; color:#fff; border:none; border-radius:8px; padding:10px 24px; font-family:'Rubik',sans-serif; font-size:1rem; font-weight:600; cursor:pointer; margin-top:10px;">
+                Close
+            </button>
+            <span id="closeMenuModalXDay2"
+                style="position:absolute; top:18px; right:28px; font-size:2rem; color:#702525; cursor:pointer;">&times;</span>
+        </div>
+    </div>
+
+    <!-- Menu Modal for DAY 3 -->
+    <div id="menuModalDay3"
+        style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.35); z-index:9999; justify-content:center; align-items:center; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);">
+        <div
+            style="background:#fff; border-radius:24px; max-width:360px; width:95%; height: 500px; padding:40px 28px; box-shadow:0 12px 48px rgba(0,0,0,0.25); position:relative;">
+            <h2 style="font-family:'Rubik',sans-serif; color:#702525; margin-bottom:18px; font-size:2rem;">Day 2 Menu
+                &times; Items7(Go)
+            </h2>
+            <ul
+                style="font-family:'Montserrat',sans-serif; font-size:1.4rem; color:#333; margin-bottom:18px; padding-left:18px;">
+                <div class="meal">
+                    <div class="meal-plate">
+                        <img src="assets/plate1.png" alt="Plate of Food" style="width: 100%; height: 100%;">
+                    </div>
+                    <li style="list-style: none;"><strong>Breakfast:</strong> Toasted Bread </li>
+                </div>
+                <br>
+                <div class="meal">
+                    <div class="meal-plate">
+                        <img src="assets/plate1.png" alt="Plate of Food" style="width: 100%; height: 100%;">
+                    </div>
+
+                    <li style="list-style: none;"><strong>Lunch:</strong> Porage Yam &amp; Fish
+                    </li>
+                </div>
+                <br>
+                <div class="meal">
+                    <div class="meal-plate">
+                        <img src="assets/plate1.png" alt="Plate of Food" style="width: 100%; height: 100%;">
+                    </div>
+
+                    <li style="list-style: none;"><strong>Dinner:</strong> Jollof Rice, Dodo &amp; Chicken </li>
+                </div>
+            </ul>
+            <button id="closeMenuModalDay3"
+                style="background:#702525; color:#fff; border:none; border-radius:8px; padding:10px 24px; font-family:'Rubik',sans-serif; font-size:1rem; font-weight:600; cursor:pointer; margin-top:10px;">
+                Close
+            </button>
+            <span id="closeMenuModalXDay3"
+                style="position:absolute; top:18px; right:28px; font-size:2rem; color:#702525; cursor:pointer;">&times;</span>
+        </div>
+    </div>
+
+    <!-- Subscribe Modal -->
+    <div id="subscribeModal"
+        style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.35); z-index:9999; justify-content:center; align-items:center; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);">
+        <div
+            style="background:#fff; border-radius:24px; max-width:400px; width:90%; padding:32px 24px; box-shadow:0 8px 32px rgba(0,0,0,0.2); position:relative;">
+            <h2 style="font-family:'Rubik',sans-serif; color:#702525; margin-bottom:16px;">Subscribe</h2>
+            <form id="subscribeForm">
+                <div style="margin-bottom:16px;">
+                    <label for="subscriberName"
+                        style="font-family:'Montserrat',sans-serif; font-size:1rem; color:#333;">Name:</label><br>
+                    <input type="text" id="subscriberName" name="subscriberName" required
+                        style="width:100%; padding:8px; border-radius:6px; border:1px solid #ccc; margin-top:4px;">
+                </div>
+                <div style="margin-bottom:16px;">
+                    <label for="subscriberEmail"
+                        style="font-family:'Montserrat',sans-serif; font-size:1rem; color:#333;">E-mail:</label><br>
+                    <input type="email" id="subscriberEmail" name="subscriberEmail" required
+                        style="width:100%; padding:8px; border-radius:6px; border:1px solid #ccc; margin-top:4px;">
+                </div>
+                <div style="margin-bottom:16px;">
+                    <label for="subscriberPhone"
+                        style="font-family:'Montserrat',sans-serif; font-size:1rem; color:#333;">WhatsApp
+                        Number:</label><br>
+                    <input type="tel" id="subscriberPhone" name="subscriberPhone" required
+                        style="width:100%; padding:8px; border-radius:6px; border:1px solid #ccc; margin-top:4px;">
+                </div>
+                <button onclick="window.location.href='chowmenu.html'" type="submit"
+                    style="background:#702525; color:#fff; border:none; border-radius:8px; padding:10px 24px; font-family:'Rubik',sans-serif; font-size:1rem; font-weight:600; cursor:pointer;">
+                    SUBMIT
+                </button>
+            </form>
+            <span id="closeSubscribeModal"
+                style="position:absolute; top:12px; right:18px; font-size:1.5rem; color:#702525; cursor:pointer;">&times;</span>
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            function ready(fn) {
+                if (document.readyState !== 'loading') fn();
+                else document.addEventListener('DOMContentLoaded', fn);
+            }
+
+            ready(() => {
+                const elements = document.querySelectorAll('.menu-animate');
+                if (!elements.length) {
+                    console.error('[Typing] No .menu-animate elements found.');
+                    return;
+                }
+
+                const phrases = ['MENU ITEM...', 'CLICK HERE'];
+                const TYPING_SPEED = 120;
+                const DELETING_SPEED = 60;
+                const PAUSE_AFTER = 900;
+                const PAUSE_BEFORE = 300;
+
+                elements.forEach((el, idx) => {
+                    let pIndex = 0;
+                    let charIndex = 0;
+                    let deleting = false;
+
+                    // clear any initial text
+                    el.textContent = '';
+
+                    function tick() {
+                        const current = phrases[pIndex];
+
+                        if (!deleting) {
+                            charIndex = Math.min(charIndex + 1, current.length);
+                            el.textContent = current.slice(0, charIndex);
+
+                            if (charIndex >= current.length) {
+                                deleting = true;
+                                setTimeout(tick, PAUSE_AFTER);
+                                return;
+                            }
+                            setTimeout(tick, TYPING_SPEED);
+                        } else {
+                            charIndex = Math.max(charIndex - 1, 0);
+                            el.textContent = current.slice(0, charIndex);
+
+                            if (charIndex <= 0) {
+                                deleting = false;
+                                pIndex = (pIndex + 1) % phrases.length;
+                                setTimeout(tick, PAUSE_BEFORE);
+                                return;
+                            }
+                            setTimeout(tick, DELETING_SPEED);
+                        }
+                    }
+
+                    // stagger start times a bit so they don’t all sync perfectly
+                    setTimeout(tick, 400 + idx * 300);
+                });
+            });
+        })();
+
+
+
+        // Show menu modal for DAY 1
+        document.querySelectorAll('.menu-card:nth-child(1) .menu-animate')[0].onclick = function (e) {
+            e.preventDefault();
+            document.getElementById('menuModalDay1').style.display = 'flex';
+        };
+        document.getElementById('closeMenuModalDay1').onclick = function () {
+            document.getElementById('menuModalDay1').style.display = 'none';
+        };
+        document.getElementById('closeMenuModalXDay1').onclick = function () {
+            document.getElementById('menuModalDay1').style.display = 'none';
+        };
+        document.getElementById('menuModalDay1').onclick = function (e) {
+            if (e.target === this) this.style.display = 'none';
+        };
+
+        // Show menu modal for DAY 2
+        document.querySelectorAll('.menu-card:nth-child(2) .menu-animate')[0].onclick = function (e) {
+            e.preventDefault();
+            document.getElementById('menuModalDay2').style.display = 'flex';
+        };
+        document.getElementById('closeMenuModalDay2').onclick = function () {
+            document.getElementById('menuModalDay2').style.display = 'none';
+        };
+        document.getElementById('closeMenuModalXDay2').onclick = function () {
+            document.getElementById('menuModalDay2').style.display = 'none';
+        };
+        document.getElementById('menuModalDay2').onclick = function (e) {
+            if (e.target === this) this.style.display = 'none';
+        };
+
+        // Show menu modal for DAY 3
+        document.querySelectorAll('.menu-card:nth-child(3) .menu-animate')[0].onclick = function (e) {
+            e.preventDefault();
+            document.getElementById('menuModalDay3').style.display = 'flex';
+        };
+        document.getElementById('closeMenuModalDay3').onclick = function () {
+            document.getElementById('menuModalDay3').style.display = 'none';
+        };
+        document.getElementById('closeMenuModalXDay3').onclick = function () {
+            document.getElementById('menuModalDay3').style.display = 'none';
+        };
+        document.getElementById('menuModalDay3').onclick = function (e) {
+            if (e.target === this) this.style.display = 'none';
+        };
+
+        // Subscribe modal logic
+        document.querySelector('.subscribe button').onclick = function (e) {
+            e.preventDefault();
+            document.getElementById('subscribeModal').style.display = 'flex';
+        };
+        document.getElementById('closeSubscribeModal').onclick = function () {
+            document.getElementById('subscribeModal').style.display = 'none';
+        };
+        document.getElementById('subscribeModal').onclick = function (e) {
+            if (e.target === this) this.style.display = 'none';
+        };
+        document.getElementById('subscribeForm').onsubmit = function (e) {
+            e.preventDefault();
+            document.getElementById('subscribeModal').style.display = 'none';
+            this.reset();
+            window.location.href = 'payment.html';
+        };
+
+        // Show modal if query param is present
+        const params = new URLSearchParams(window.location.search);
+        const showPolicy = params.get('showPolicy');
+        const policyModal = document.getElementById('policyModal');
+        if (showPolicy === 'true') {
+            policyModal.style.display = 'flex';
+        }
+
+        // Modal logic
+        const closeModal = document.getElementById('closeModal');
+        const agreeBtn = document.getElementById('agreeBtn');
+        const check1 = document.getElementById('check1');
+        const check2 = document.getElementById('check2');
+
+        closeModal.onclick = function () {
+            policyModal.style.display = 'none';
+        };
+        [check1, check2].forEach(chk => {
+            chk.onchange = function () {
+                agreeBtn.disabled = !(check1.checked && check2.checked);
+            };
+        });
+        agreeBtn.onclick = function () {
+            policyModal.style.display = 'none';
+        };
+        policyModal.onclick = function (e) {
+            if (e.target === policyModal) policyModal.style.display = 'none';
+        };
+
+        const arrow = document.getElementById('arrow');
+
+        // Arrow navigation
+        arrow.onclick = function () {
+            window.location.href = 'Decision.html';
+        };
+    </script>
+
+</body>
+
+</html>
