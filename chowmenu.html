@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bugs Chow Menu</title>
+    <link rel="stylesheet" href="Chow.css">
+</head>
+
+<body>
+    <!-- Your menu content here -->
+
+    <nav>
+        <img src="assets/bugsLogo.png" alt="logo" class="logo" />
+        <img src="assets/arrow.png" alt="arrow" id="arrow" />
+    </nav>
+
+    <section id="menu">
+        <h1>Menu</h1>
+        <div class="menu-container">
+            <div class="menu-card"></div>
+            <div class="menu-card"></div>
+            <div class="menu-card"></div>
+        </div>
+    </section>
+
+
+
+    <script>
+        // Show modal if query param is present
+        const params = new URLSearchParams(window.location.search);
+        const showPolicy = params.get('showPolicy');
+        const policyModal = document.getElementById('policyModal');
+        if (showPolicy === 'true') {
+            policyModal.style.display = 'flex';
+        }
+
+        // Modal logic
+        const closeModal = document.getElementById('closeModal');
+        const agreeBtn = document.getElementById('agreeBtn');
+        const check1 = document.getElementById('check1');
+        const check2 = document.getElementById('check2');
+
+        closeModal.onclick = function () {
+            policyModal.style.display = 'none';
+        };
+        [check1, check2].forEach(chk => {
+            chk.onchange = function () {
+                agreeBtn.disabled = !(check1.checked && check2.checked);
+            };
+        });
+        agreeBtn.onclick = function () {
+            policyModal.style.display = 'none';
+        };
+        policyModal.onclick = function (e) {
+            if (e.target === policyModal) policyModal.style.display = 'none';
+        };
+
+        const arrow = document.getElementById('arrow');
+
+        // Arrow navigation
+        arrow.onclick = function () {
+            window.location.href = 'Decision.html';
+        };
+    </script>
+</body>
+
+</html>

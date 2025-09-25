@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+}
+
+nav {
+    background: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav img.logo {
+    height: 20px;
+}
+
+#arrow {
+    width: 23px;
+}
+
+.heroe {
+    position: relative;
+    background-image: url('assets/chowportraitbg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 0px;
+    overflow: hidden;
+}
+
+/* Glassmorphism overlay */
+.heroe::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 0px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Ensure text is above the overlay */
+.heroe-text {
+    position: relative;
+    z-index: 2;
+    font-family: 'Rubik', sans-serif;
+    /* font-size: 2rem; */
+    color: white;
+    /* padding: 10px; */
+    height: 60%;
+}
+
+.heroe-text h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.heroe-text .ht {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px 20px;
+}
+
+.heroe-text .ht #bugschowspan {
+    display: flex;
+    /* height: 100%; */
+    gap: 4px;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+}
+
+.heroe-text .ht .chowcta {
+    background-color: #702525;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    padding: 10px 20px;
+    margin-top: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.heroe-text .ht .chowcta:focus {
+    background-color: #ffaf72;
+}
+
+.chowcontain {
+    background-color: #d1c4c4;
+    height: 80vh;
+}

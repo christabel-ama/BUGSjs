@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUGS</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+
+<body>
+    <nav>
+        <img src="assets/bugsLogo.png" alt="logo" class="logo" />
+        <img src="assets/arrow.png" alt="arrow" id="arrow" />
+    </nav>
+
+    <div class="chow-payment">
+        <div class="payment">
+            <h1>BUGS CHOW</h1>
+            <h1
+                style="color: #702525; letter-spacing: 1px;  margin-bottom: 36px; width: fit-content; padding: 4px 8px; border-radius: 10px; margin: auto auto 20px; background-color: #fff; line-height: 3rem;">
+                PAYMENT
+            </h1>
+
+            <h2 style="font-size: 2.6rem; line-height: 3rem; text-align: center; color: #000;">ACCOUNT NUMBER</h2>
+            <h2 style="margin-bottom: 20px;">0084178910</h2>
+            <!-- Receipt Upload Section -->
+            <div class="receipt" id="receiptBox">
+                <p style="font-family: 'Edu NSW ACT Cursive', cursive;">Upload Receipt</p>
+                <input type="file" id="fileInput" accept="image/*" hidden>
+                <button id="uploadBtn">Choose File</button>
+                <div id="preview"></div>
+                <button id="submitBtn" style="display: none;">Submit</button>
+            </div>
+            <p style="margin-top: 20px; font-size: 1rem; color: #fff; font-family: 'Edu NSW ACT Cursive', cursive;">
+                *Make sure to upload a clear image of your
+                receipt*</p>
+        </div>
+    </div>
+</body>
+
+<script>
+    const arrow = document.getElementById('arrow');
+
+    // Arrow navigation
+    arrow.onclick = function () {
+        window.location.href = 'menu.html';
+    };
+
+    // Receipt upload and preview
+    const fileInput = document.getElementById("fileInput");
+    const uploadBtn = document.getElementById("uploadBtn");
+    const preview = document.getElementById("preview");
+    const submitBtn = document.getElementById("submitBtn");
+    const receiptBox = document.getElementById("receiptBox");
+
+    // grab the <p> inside receiptBox ("Upload Receipt")
+    const uploadText = receiptBox.querySelector("p");
+
+    uploadBtn.addEventListener("click", () => fileInput.click());
+
+    fileInput.addEventListener("change", () => {
+        const file = fileInput.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = e => {
+                preview.innerHTML = `<img src="${e.target.result}" alt="Receipt">`;
+                submitBtn.style.display = "inline-block"; // show submit button
+                uploadBtn.style.display = "none";         // hide choose file button
+                uploadText.style.display = "none";        // hide "Upload Receipt" text
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+
+    submitBtn.addEventListener("click", () => {
+        alert("Receipt submitted successfully!");
+        window.location.href = "submit.html";
+    });
+</script>
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUGS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="Chow.css">
+</head>
+
+<body>
+    <nav>
+        <img src="assets/bugsLogo.png" alt="logo" class="logo" />
+        <img src="assets/arrow.png" alt="arrow" id="arrow" />
+    </nav>
+
+    <div class="heroe">
+        <div class="heroe-text">
+            <div class="ht">
+                <h1>WELCOME TO</h1>
+                <h1 id="bugschowspan">
+                    BUGS <span style="color: #702525;">CHOW</span>
+                </h1>
+                <p style="margin-top: 10px; font-size: 1.2rem; font-family: 'Kanit', sans-serif; color: #fff;">
+                    Savor every moment with our delicious selection of breakfast, lunch, and dinner favorites. Enjoy a
+                    feast of taste and variety—your next great meal is waiting.
+                </p>
+                <button class="chowcta" id="policyBtn">
+                    GET STARTED
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for policy statements -->
+    <div id="policyModal"
+        style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); z-index:9999; justify-content:center; align-items:center;">
+        <div
+            style="background:#fff; border-radius:16px; max-width:400px; width:90%; padding:32px 24px; box-shadow:0 8px 32px rgba(0,0,0,0.2); position:relative;">
+            <h2 style="font-family:'Rubik',sans-serif; color:#702525; margin-bottom:16px;">Bugs Chow Policy</h2>
+            <ul
+                style="font-family:'Montserrat',sans-serif; font-size:1rem; color:#333; margin-bottom:18px; padding-left:18px;">
+                <li>
+                    <strong>Trial Before Subscription</strong>
+                    <ul style="margin-top:4px;">
+                        <li>Explore our Day 1, Day 2, and Day 3 menus.</li>
+                        <li>If the meals sit well with you, subscribe once for the full plan.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Payment & Subscription</strong>
+                    <ul style="margin-top:4px;">
+                        <li>Subscription must be fully prepaid — no daily payments or partial options.</li>
+                        <li>Once subscribed, your plan covers all meals without repeated confirmations.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Service Guidelines</strong>
+                    <ul style="margin-top:4px;">
+                        <li>Meals are served at scheduled times only.</li>
+                        <li>All payments are final and non-refundable.</li>
+                        <li>If our menu doesn’t suit your needs, please do not subscribe.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Quality & Conduct</strong>
+                    <ul style="margin-top:4px;">
+                        <li>All meals are pre-packed and sealed for hygiene.</li>
+                        <li>Treat staff with respect; misconduct may lead to service termination.</li>
+                    </ul>
+                </li>
+            </ul>
+            <div style="margin-bottom:16px;">
+                <label><input type="checkbox" id="check1"> I have read and understood the policy.</label><br>
+                <label><input type="checkbox" id="check2"> I agree to follow the dining rules.</label>
+            </div>
+            <button id="agreeBtn"
+                style="background:#702525; color:#fff; border:none; border-radius:8px; padding:10px 24px; font-family:'Rubik',sans-serif; font-size:1rem; font-weight:600; cursor:pointer;"
+                disabled>Agree</button>
+            <span id="closeModal"
+                style="position:absolute; top:12px; right:18px; font-size:1.5rem; color:#702525; cursor:pointer;">&times;</span>
+        </div>
+    </div>
+
+    <div class="chowcontain">
+        <div class="chowcard">
+
+        </div>
+    </div>
+
+    <script>
+        const arrow = document.getElementById('arrow');
+        arrow.onclick = function () {
+            window.location.href = 'Decision.html';
+        };
+
+        // Modal logic
+        const policyBtn = document.getElementById('policyBtn');
+        const policyModal = document.getElementById('policyModal');
+        const closeModal = document.getElementById('closeModal');
+        const agreeBtn = document.getElementById('agreeBtn');
+        const check1 = document.getElementById('check1');
+        const check2 = document.getElementById('check2');
+
+        policyBtn.onclick = function () {
+            policyModal.style.display = 'flex';
+        };
+        closeModal.onclick = function () {
+            policyModal.style.display = 'none';
+        };
+        [check1, check2].forEach(chk => {
+            chk.onchange = function () {
+                agreeBtn.disabled = !(check1.checked && check2.checked);
+            };
+        });
+        agreeBtn.onclick = function () {
+            policyModal.style.display = 'none';
+        };
+        // Optional: close modal when clicking outside the modal box
+        policyModal.onclick = function (e) {
+            if (e.target === policyModal) policyModal.style.display = 'none';
+        };
+    </script>
+</body>
+
+</html>

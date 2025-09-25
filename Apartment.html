@@ -1,234 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bootstrap Carousel Fix</title>
 
-    <!-- ✅ Bootstrap CSS (load before custom CSS) -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bootstrap Carousel Fix</title>
 
-    <!-- Your custom styles (always after Bootstrap) -->
-    <link rel="stylesheet" href="Apartment.css" />
-  </head>
-  <body>
-    <nav>
-      <img src="assets/bugsLogo.png" alt="logo" class="logo" />
-      <img src="assets/arrow.png" alt="arrow" id="arrow" />
-    </nav>
+  <!-- ✅ Bootstrap CSS (load before custom CSS) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 
-    <!-- ✅ Bootstrap Carousel -->
-    <div
-      id="carouselExampleCaptions"
-      class="carousel slide"
-      data-bs-ride="carousel"
-    >
-      <div class="carousel-indicators">
-        <button
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide-to="0"
-          class="active"
-          aria-current="true"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide-to="1"
-          aria-label="Slide 2"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide-to="2"
-          aria-label="Slide 3"
-        ></button>
-      </div>
+  <!-- Your custom styles (always after Bootstrap) -->
+  <link rel="stylesheet" href="Apartment.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
 
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img
-            src="assets/apartment1.jpg"
-            class="d-block w-100"
-            alt="Slide 1"
-          />
-          <div class="carousel-caption d-none d-md-block">
-            <!-- <h5>First slide label</h5> -->
-            <!-- <p>Some representative placeholder content for the first slide.</p> -->
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img
-            src="assets/apartment2.jpg"
-            class="d-block w-100"
-            alt="Slide 2"
-          />
-          <div class="carousel-caption d-none d-md-block">
-            <!-- <h5>Second slide label</h5> -->
-            <!-- <p>Some representative placeholder content for the second slide.</p> -->
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img
-            src="assets/apartment3.jpg"
-            class="d-block w-100"
-            alt="Slide 3"
-          />
-          <div class="carousel-caption d-none d-md-block">
-            <!-- <h5>Third slide label</h5> -->
-            <!-- <p>Some representative placeholder content for the third slide.</p> -->
-          </div>
-        </div>
-      </div>
+<body>
+  <nav>
+    <img src="assets/bugsLogo.png" alt="logo" class="logo" />
+    <img src="assets/arrow.png" alt="arrow" id="arrow" />
+  </nav>
 
-      <!-- Carousel controls -->
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+  <!-- ✅ Bootstrap Carousel -->
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+        aria-label="Slide 4"></button>
     </div>
 
-    <div>
-      <div class="change">
-        <div class="attention1">
-          <h3 class="available" id="color1">Properties</h3>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/apartment1.jpg" class="d-block w-100" alt="Slide 1" />
+        <div class="carousel-caption d-none d-md-block">
+          <!-- <h5>First slide label</h5> -->
+          <!-- <p>Some representative placeholder content for the first slide.</p> -->
         </div>
-        <div class="attention2" id="color2">
-          <h3 class="available">ContactUs</h3>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/apartment2.jpg" class="d-block w-100" alt="Slide 2" />
+        <div class="carousel-caption d-none d-md-block">
+          <!-- <h5>Second slide label</h5> -->
+          <!-- <p>Some representative placeholder content for the second slide.</p> -->
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/apartment3.jpg" class="d-block w-100" alt="Slide 3" />
+        <div class="carousel-caption d-none d-md-block">
+          <!-- <h5>Third slide label</h5> -->
+          <!-- <p>Some representative placeholder content for the third slide.</p> -->
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/apartment4.jpg" class="d-block w-100" alt="Slide 4" />
+        <div class="carousel-caption d-none d-md-block">
+          <!-- <h5>Fourth slide label</h5> -->
+          <!-- <p>Some representative placeholder content for the fourth slide.</p> -->
         </div>
       </div>
     </div>
 
-    <div id="content">
-      <div class="prop1">
-        <div class="props">
-          <div class="stdContainer">
-            <img src="assets/stdApartment.jpg" alt="std" class="std" />
-          </div>
-          <h2 class="stdText">STUDIO APARTMENT</h2>
-          <h5>
-            Your perfect cozy hideaway! Modern, affordable, and designed for
-            smart living. A stylish home just for you.
-          </h5>
-          <div class="button"><button><a href="FORM.html">BUY</a></button></div>
-        </div>
+    <!-- Carousel controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 
-        <div class="props">
-          <div class="stdContainer">
-            <img src="assets/stdApartment.jpg" alt="std" class="std" />
-          </div>
-          <h2 class="stdText">ONE BEDROOM</h2>
-          <h5>
-            Enjoy privacy and comfort with the right amount of space. Perfect
-            for people who love a little extra room.
-          </h5>
-          <div class="button"><button><a href="FORM.html">BUY</a></button></div>
+  <div>
+    <div class="change">
+      <div class="attention1">
+        <h3 class="available" id="color1">Properties</h3>
+      </div>
+      <div class="attention2" id="color2">
+        <h3 class="available">ContactUs</h3>
+      </div>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="prop1">
+      <div class="props">
+        <div class="stdContainer">
+          <img src="assets/stdApartment.jpg" alt="std" class="std" />
         </div>
+        <h2 class="stdText">STUDIO APARTMENT</h2>
+        <h5>
+          Your perfect cozy hideaway! Modern, affordable, and designed for
+          smart living. A stylish home just for you.
+        </h5>
+        <div class="button"><button><a href="FORM.html?type=studio">BOOK</a></button></div>
       </div>
 
-      <div class="prop1" id="prop1">
-        <div class="props">
-          <div class="stdContainer">
-            <img src="assets/stdApartment.jpg" alt="std" class="std" />
-          </div>
-          <h2 class="stdText">TWO BEDROOM</h2>
-          <h5>
-            Balance space and style. Whether it's for family, guests, or a home
-            office — two bedrooms give you the freedom to grow.
-          </h5>
-          <div class="button"><button><a href="FORM.html">BUY</a></button></div>
+      <div class="props">
+        <div class="stdContainer">
+          <img src="assets/stdApartment.jpg" alt="std" class="std" />
         </div>
-
-        <div class="props">
-          <div class="stdContainer">
-            <img src="assets/stdApartment.jpg" alt="std" class="std" />
-          </div>
-          <h2 class="stdText">THREE BEDROOM</h2>
-          <h5>
-            Room for everyone, and more. Spacious, family-friendly, and designed
-            for comfort without compromise.
-          </h5>
-          <div class="button"><button><a href="FORM.html">BUY</a></button></div>
-        </div>
+        <h2 class="stdText">ONE BEDROOM</h2>
+        <h5>
+          Enjoy privacy and comfort with the right amount of space. Perfect
+          for people who love a little extra room.
+        </h5>
+        <div class="button"><button><a href="FORM.html?type=one">BOOK</a></button></div>
       </div>
     </div>
 
-    <!-- Bootstrap Bundle (includes Popper) -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-    <script>
-      const arrow = document.getElementById('arrow');
+    <div class="prop1" id="prop1">
+      <div class="props">
+        <div class="stdContainer">
+          <img src="assets/stdApartment.jpg" alt="std" class="std" />
+        </div>
+        <h2 class="stdText">TWO BEDROOM</h2>
+        <h5>
+          Balance space and style. Whether it's for family, guests, or a home
+          office — two bedrooms give you the freedom to grow.
+        </h5>
+        <div class="button"><button><a href="FORM.html?type=two">BOOK</a></button></div>
+      </div>
 
-      const div1 = document.querySelector('.attention1');
-      const div2 = document.querySelector('.attention2');
-      const available = document.querySelector('#color2');
-      const available1 = document.querySelector('#color1');
-      const properties = document.querySelector('#content')
+      <div class="props">
+        <div class="stdContainer">
+          <img src="assets/stdApartment.jpg" alt="std" class="std" />
+        </div>
+        <h2 class="stdText">THREE BEDROOM</h2>
+        <h5>
+          Room for everyone, and more. Spacious, family-friendly, and designed
+          for comfort without compromise.
+        </h5>
+        <div class="button"><button><a href="FORM.html?type=three">BOOK</a></button></div>
+      </div>
+    </div>
+  </div>
 
-      let isFirstActive = true; // boolean to track active div
+  <!-- Bootstrap Bundle (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script>
+    const arrow = document.getElementById('arrow');
 
-      function updateActive() {
-        if (isFirstActive) {
-          div1.style.backgroundColor = 'white'; // active
-          div2.style.backgroundColor = 'transparent'; // inactive
-          available1.style.color = 'black';
-          available.style.color = 'white';
-          properties.style.display = 'block'
-        } else {
-          div1.style.backgroundColor = 'transparent'; // inactive
-          div2.style.backgroundColor = 'white'; // active
-          available1.style.color = 'white';
-          available.style.color = 'black';
-          properties.style.display = 'none'
+    const div1 = document.querySelector('.attention1');
+    const div2 = document.querySelector('.attention2');
+    const available = document.querySelector('#color2');
+    const available1 = document.querySelector('#color1');
+    const properties = document.querySelector('#content')
 
-        }
+    let isFirstActive = true; // boolean to track active div
+
+    function updateActive() {
+      if (isFirstActive) {
+        div1.style.backgroundColor = 'white'; // active
+        div2.style.backgroundColor = 'transparent'; // inactive
+        available1.style.color = 'black';
+        available.style.color = 'white';
+        properties.style.display = 'block'
+      } else {
+        div1.style.backgroundColor = 'transparent'; // inactive
+        div2.style.backgroundColor = 'white'; // active
+        available1.style.color = 'white';
+        available.style.color = 'black';
+        properties.style.display = 'none'
+
       }
+    }
 
-      // Event listeners
-      div1.addEventListener('click', () => {
-        isFirstActive = true;
-        updateActive();
-        // update content here
-      });
-
-      div2.addEventListener('click', () => {
-        isFirstActive = false;
-        updateActive();
-        // update content here
-      });
-
-      // Initialize colors
+    // Event listeners
+    div1.addEventListener('click', () => {
+      isFirstActive = true;
       updateActive();
+      // update content here
+    });
 
-      // Arrow navigation
-      arrow.onclick = function () {
-        window.location.href = 'Decision.html';
-      };
+    div2.addEventListener('click', () => {
+      isFirstActive = false;
+      updateActive();
+      // update content here
+    });
 
-      
-    </script>
-  </body>
+    // Initialize colors
+    updateActive();
+
+    // Arrow navigation
+    arrow.onclick = function () {
+      window.location.href = 'Decision.html';
+    };
+
+
+  </script>
+</body>
+
 </html>

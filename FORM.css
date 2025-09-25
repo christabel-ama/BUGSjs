@@ -1,47 +1,126 @@
-*{
+.booking-container {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+    padding: 32px 24px;
+    max-width: 420px;
+    width: 100%;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form#bookingForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+form#bookingForm label {
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+    color: #7c3f2c;
+    margin-bottom: 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+form#bookingForm input,
+form#bookingForm select {
+    width: 100%;
+    height: 38px;
+    padding: 8px 14px;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    font-size: 15px;
+    background: #f8f6f3;
+    color: #7c3f2c;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+form#bookingForm input:focus,
+form#bookingForm select:focus {
+    outline: none;
+    border: 2px solid #a71f1f;
+    box-shadow: 0 4px 16px rgba(167, 31, 31, 0.08);
+}
+
+form#bookingForm button {
+    min-height: 40px;
+    min-width: 120px;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    background: linear-gradient(90deg, #a71f1f 60%, #c9a97e 100%);
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 0 32px;
+    box-shadow: 0 2px 8px rgba(167, 31, 31, 0.12);
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    margin-top: 10px;
+}
+
+form#bookingForm button:hover {
+    background: linear-gradient(90deg, #c9a97e 60%, #a71f1f 100%);
+    box-shadow: 0 4px 16px rgba(167, 31, 31, 0.18);
+}
+
+.error {
+    color: #d32f2f;
+    font-size: 14px;
+    margin-top: 2px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-image: url(assets/formback.jpg);
 
     background-size: contain;
     background-repeat: no-repeat;
     /* height: 1000vh; */
-    
+
 }
 
 nav {
-  background: #fff;
-  padding: 10px 20px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: space-between;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+    background: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 nav img.logo {
-  height: 20px;
+    height: 20px;
 }
 
 #arrow {
-  width: 23px;
+    width: 23px;
 }
 
-.bac{
+.bac {
     width: 100%;
-    height: 70vh;
+    height: 80vh;
     background-color: rgb(119, 57, 46);
-   border-top-left-radius: 30px;
+    border-top-left-radius: 30px;
     border-top-right-radius: 30px;
     margin-top: 25vh;
 }
 
-form{
+form {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -50,24 +129,86 @@ form{
     /* align-self: center; */
     padding: 40px 30px;
     gap: 30px;
-    
-    color: #fff;;
-}
-h2{
-    font-family: 'Rubik';
-    align-self: center;
+
+    color: #fff;
+    ;
 }
 
-input{
+h2 {
+    font-family: 'Rubik';
+    align-self: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+input {
     width: 100%;
     height: 33px;
     padding: 10px;
+    border-radius: 1rem;
+    border: none;
+    font-size: 14px;
 }
-label{
-    font-family: 'Kanit';
 
-    
+
+label {
+    font-family: 'Kanit';
+    font-size: 16px;
 }
-option{
+
+/* option {
     width: 10%;
+} */
+
+.formbtndiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.formbtn {
+    height: 20px;
+    width: fit-content;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #a71f1f;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+}
+
+form #gender,
+#days {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
+    background-color: #fff;
+    font-size: 14px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    appearance: none;
+    display: flex;
+    /* removes default arrow in some browsers */
+    -webkit-appearance: none;
+    /* Safari */
+    -moz-appearance: none;
+    /* Firefox */
+}
+
+
+#gender option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form #gender,
+#days:focus {
+    outline: none;
+    border: 2px solid #c0392b;
+    /* highlight color on focus */
 }

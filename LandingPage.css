@@ -1,63 +1,62 @@
-  
-  *{
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-  
+
   body {
     background-color: rgb(231, 204, 168);
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
 
-    .Page {
-        display: flex;
-        flex-direction: column;
-      /* text-align: center; */
-    }
+  .Page {
+    display: flex;
+    flex-direction: column;
+    /* text-align: center; */
+  }
 
-    .logos{
-        display: flex;
-        /* text-align: center; */
-        align-items: center;
-    }
+  .logos {
+    display: flex;
+    /* text-align: center; */
+    align-items: center;
+  }
 
-    .bugsWindows {
-      width: 30px;
-      opacity: 0;
-      transition: all 2s ease-in;
-    }
+  .bugsWindows {
+    width: 30px;
+    opacity: 0;
+    transition: all 2s ease-in;
+  }
 
-    .bugs {
-      font-size: 50px;
-      font-weight: bold;
-      color: #000000;
-      opacity: 0;
-      transform: translateX(-10px);
-      transition: all 1.5s ease;
-     
-    }
+  .bugs {
+    font-size: 50px;
+    font-weight: bold;
+    color: #000000;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 1.5s ease;
 
-    .Start {
-      margin-top: 50px;
-      opacity: 0;
-      transition: opacity 1s ease-in;
-    }
+  }
 
-    .getStarted {
-      text-decoration: none;
-      background-color: #d92b2b;
-      color: white;
-      padding: 13px 45px;
-      border-radius: 50px;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
+  .Start {
+    margin-top: 50px;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+  }
 
-    .getStarted:hover {
-      background-color: #a71f1f;
-    }
+  .getStarted {
+    text-decoration: none;
+    background-color: #d92b2b;
+    color: white;
+    padding: 13px 45px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+
+  .getStarted:hover {
+    background-color: #a71f1f;
+  }

@@ -1,0 +1,35 @@
+<div class="booking-container">
+    <form id="bookingForm">
+        <h2>Book an Apartment</h2>
+        <label>Full Name <input type="text" name="fullname" required></label>
+        <label>WhatsApp Number <input type="tel" name="whatsapp" required></label>
+        <label>Gender
+            <select name="gender" required>
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </label>
+        <label>Check-in <input type="date" name="checkin" required></label>
+        <label>Check-out <input type="date" name="checkout" required></label>
+        <label>Apartment
+            <select name="apartment" id="apartment" required>
+                <option value="">Select</option>
+                <option value="studio">Studio</option>
+                <option value="one">One Bed</option>
+                <option value="two">Two Bed</option>
+                <option value="three">Three Bed</option>
+            </select>
+        </label>
+        <label>Number of People
+            <input type="number" name="num_people" id="num_people" min="1" required>
+            <span id="numPeopleError" class="error"></span>
+        </label>
+        <label>Price Range (₦)
+            <input type="number" name="price" id="price" required>
+            <span id="priceError" class="error"></span>
+        </label>
+        <button type="submit">Book Now</button>
+    </form>
+</div>

@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+}
+
+nav {
+    background: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav img.logo {
+    height: 20px;
+}
+
+#arrow {
+    width: 23px;
+}
+
+.chow-payment {
+    width: 100%;
+    height: 120vh;
+    display: grid;
+    place-items: center;
+    padding: 10px;
+    background: url(assets/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: contain;
+    /* opacity: 80%; */
+}
+
+.payment {
+    width: 86%;
+    height: auto;
+    margin: auto;
+    background-color: #702525;
+    border: 4px solid #000;
+    border-radius: 1rem;
+    padding: 20px 10px;
+}
+
+.payment h1 {
+    font-family: 'Kanit', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    color: #fff;
+    line-height: 4rem;
+    letter-spacing: -1px;
+}
+
+.payment h2 {
+    font-family: 'Kanit', sans-serif;
+    text-align: center;
+    font-size: 3rem;
+    line-height: 5rem;
+    color: #fff;
+}
+
+.receipt {
+    border-radius: 1rem;
+    padding: 20px;
+    background-color: #fff;
+    width: 80%;
+    margin: auto;
+    height: auto;
+    text-align: center;
+    border: 2px dashed #ccc;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.receipt:hover {
+    border-color: #007bff;
+}
+
+#uploadBtn,
+#submitBtn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: royalblue;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+#uploadBtn:hover,
+#submitBtn:hover {
+    background-color: dodgerblue;
+}
+
+#preview img {
+    margin-top: 15px;
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    display: block;
+}
